@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { connect } from "react-redux";
 
 // interface Props {
 //   /**
@@ -22,10 +23,11 @@ import Button from '@mui/material/Button';
 //   window?: () => Window;
 // }
 
-const drawerWidth = 240;
-const navItems = ['Cart (0)'];
 
-export default function Header(props) {
+
+function Header(props) {
+  const drawerWidth = 240;
+const navItems = [`CART (${props.cart.products.length})`];
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -105,7 +107,12 @@ export default function Header(props) {
         
       </Box>
     </Box>
+   
   );
-}
 
-// export default Header;
+}
+const mapStateToProps = (state) => ({
+  cart: state.cart,
+});
+
+export default connect(mapStateToProps)(Header);

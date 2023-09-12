@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { addItem } from "../../store/cart";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -32,10 +33,11 @@ function Products(props) {
               <Typography variant="body2" color="text.secondary">
                 <p>Description :{item.description}</p>
                <p>Price :{item.price}</p> 
+               <p>Count :{item.inventoryCount}</p> 
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">ADD TO CART</Button>
+              <Button size="small" onClick={()=>{props.addItem(item)}}>ADD TO CART</Button>
               <Button size="small">VIEW DETAILS</Button>
             </CardActions>
           </Card>
@@ -43,6 +45,7 @@ function Products(props) {
           </div>
 
           )
+          // {props.addItem(item)}
      
           
         }
@@ -54,5 +57,6 @@ const mapStateToProps = (state) => ({
   myProducts: state.product,
   myCategory: state.categories,
 });
+const mapDispatchToProps = { addItem };
 // const mapDispatchToProps = { products };
-export default connect(mapStateToProps)(Products);
+export default connect(mapStateToProps,mapDispatchToProps)(Products);

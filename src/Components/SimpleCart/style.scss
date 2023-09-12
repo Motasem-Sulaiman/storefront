@@ -1,0 +1,18 @@
+.list{
+    position: fixed;
+    width:200px;
+    background-color: rgb(241, 241, 241);
+    margin-left:86%;
+    margin-top:-10%;
+    color:rgb(88, 87, 87);
+}
+#btn{
+    background-color: red;
+    border-radius: 50%;
+}
+.lis{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
