@@ -6,7 +6,7 @@ import { getRemoteData } from "./store/actions";
 import Products from "./Components/Products/Products";
 import SimpleCart from "./Components/SimpleCart/SimpleCart";
 // import { ChakraProvider } from '@chakra-ui/react'
-import "./App.css";
+import "./App.scss";
 import { useEffect } from "react";
 function App(props) {
   useEffect(() => {
