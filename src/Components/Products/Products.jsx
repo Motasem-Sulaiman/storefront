@@ -24,14 +24,14 @@ function Products(props) {
 
 
         return(
-          <div style={{float:'left',paddingLeft:"4%",}} key={id}>
+          <div style={{float:'left',paddingLeft:"4%"}} key={id}>
              <Card  sx={{ width: '345px' ,marginLeft:"40%",marginTop:"20%",color:blue}}>
              <CardMedia
                sx={{ height: 160 }}
                image={img}
                // title="green iguana"
              />
-             <CardContent>
+             <CardContent style={{backgroundColor:"#e9ecef"}}>
                <Typography gutterBottom variant="h5" component="div">
                  <h4>{item.name}</h4>
                </Typography>
