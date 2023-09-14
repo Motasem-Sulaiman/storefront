@@ -2,13 +2,23 @@ let initialState = {
   categories: [
     {
       displayName: "New Games",
-      normalizedName: "Games",
+      normalizedName: "GAMES",
       description: "Games Description Goes Here",
     },
     {
       displayName: "Food Recipes",
-      normalizedName: "Food",
+      normalizedName: "FOOD",
       description: "Food Description Goes Here",
+    },
+    {
+      displayName: "WEAPONS",
+      normalizedName: "WEAPONS",
+      description: "WEAPONS Description Goes Here",
+    },
+    {
+      displayName: "New ELECTRONICS ",
+      normalizedName: "ELECTRONICS",
+      description: "ELECTRONICS Description Goes Here",
     },
   ],
   activeCategory: "",
@@ -38,10 +48,5 @@ export default (state = initialState, action) => {
   }
 };
 
-export const category = (name) => {
-  return {
-    type: "PICK",
-    payload: name,
-  };
-};
+
 

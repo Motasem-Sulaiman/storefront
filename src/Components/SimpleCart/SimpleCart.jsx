@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { removeItem } from "../../store/cart";
+import { removeItem } from "../../store/actions";
 import './style.scss'
 // import { addItem } from "../../store/products";
 
