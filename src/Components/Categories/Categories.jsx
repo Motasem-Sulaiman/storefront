@@ -8,8 +8,9 @@ import Products from "../Products/Products";
 function Categories(props) {
   return (
     <>
-      <h4 style={{ marginTop: "-50px" }}>Browse our Categories</h4>
+      <h3 style={{ marginTop: "-25px" ,marginLeft:'15px' ,marginBottom:'-1px'}}>Browse our Categories</h3>
       <section>
+        <div style={{marginLeft:'20px'}}>
         <span
           style={{ marginRight: "6px" }}
           onClick={() => props.category("GAMES")}
@@ -34,7 +35,7 @@ function Categories(props) {
         >
           ELECTRONICS
         </span>
-
+        </div>
         <div className="category">
           <h3>{props.myCategory.activeCategory}</h3>
         </div>

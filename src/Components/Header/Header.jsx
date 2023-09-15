@@ -36,7 +36,7 @@ const navItems = [`CART (${props.cart.products.length})`];
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} >
       <Typography variant="h6" sx={{ my: 2 }}>
         MUI
       </Typography>
@@ -56,11 +56,12 @@ const navItems = [`CART (${props.cart.products.length})`];
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} >
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
+      <AppBar component="nav" >
+        <Toolbar style={{backgroundColor:'#eee'}}>
           <IconButton
+          
             color="inherit"
             aria-label="open drawer"
             edge="start"
@@ -70,15 +71,16 @@ const navItems = [`CART (${props.cart.products.length})`];
             <MenuIcon />
           </IconButton>
           <Typography
+         
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } ,color:'#151516'}}
           >
             My Store
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: '#151516' }}>
                 {item}
               </Button>
             ))}
@@ -87,6 +89,7 @@ const navItems = [`CART (${props.cart.products.length})`];
       </AppBar>
       <nav>
         <Drawer
+        
           container={container}
           variant="temporary"
           open={mobileOpen}
@@ -102,7 +105,7 @@ const navItems = [`CART (${props.cart.products.length})`];
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ p: 3 }} >
         <Toolbar />
         
       </Box>

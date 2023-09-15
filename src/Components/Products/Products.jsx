@@ -8,7 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { blue } from "@mui/material/colors";
-import img from './reactt.png'
+import img from './product.jpg'
 
 function Products(props) {
   return (
@@ -31,7 +31,7 @@ function Products(props) {
                image={img}
                // title="green iguana"
              />
-             <CardContent style={{backgroundColor:"#e9ecef"}}>
+             <CardContent >
                <Typography gutterBottom variant="h5" component="div">
                  <h4>{item.name}</h4>
                </Typography>
@@ -41,7 +41,7 @@ function Products(props) {
                 <p>Count :{item.count}</p> 
                </Typography>
              </CardContent>
-             <CardActions>
+             <CardActions style={{backgroundColor:"#eee"}}>
                <Button size="small" onClick={()=>{props.addItem(item)}}>ADD TO CART</Button>
                <Button size="small">VIEW DETAILS</Button>
              </CardActions>

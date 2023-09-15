@@ -13,7 +13,7 @@ function App(props) {
     props.getRemoteData();
   }, []);
   return (
-    <>
+    <div >
       {/* <ChakraProvider> */}
       <Header />
       <Categories />
@@ -21,7 +21,7 @@ function App(props) {
       <SimpleCart />
       <Footer />
       {/* </ChakraProvider> */}
-    </>
+    </div>
   );
 }
 const mapDispatchToProps = { getRemoteData };
