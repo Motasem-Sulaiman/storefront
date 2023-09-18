@@ -50,6 +50,9 @@ function Categories(props) {
           }
         })}
       </section>
+      <section>
+        <Products/>
+      </section>
     </>
   );
 }

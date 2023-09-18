@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 // interface Props {
 //   /**
@@ -41,6 +42,7 @@ const navItems = [`CART (${props.cart.products.length})`];
         MUI
       </Typography>
       <Divider />
+   
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -50,6 +52,8 @@ const navItems = [`CART (${props.cart.products.length})`];
           </ListItem>
         ))}
       </List>
+   
+   
     </Box>
   );
 
@@ -70,20 +74,23 @@ const navItems = [`CART (${props.cart.products.length})`];
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-         
+          <Link to="/"  style={{textDecoration: 'none'}}> <Typography
+           
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } ,color:'#151516'}}
           >
             My Store
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
+          </Link>
+         
+          <Box sx={{ display: { xs: 'none', sm: 'block' } } } style={{marginLeft:'1300px'}}>
+          <Link to="/cart"> {navItems.map((item) => (
               <Button key={item} sx={{ color: '#151516' }}>
                 {item}
               </Button>
-            ))}
+            ))}</Link>
+           
           </Box>
         </Toolbar>
       </AppBar>
