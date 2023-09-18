@@ -1,3 +1,36 @@
 body {
   background-color: #c4c8cb;
 }
+// .form-2 {
+//   display: flex;
+//   flex-direction: column;
+//   text-align: start;
+// // }
+.inp {
+  width: 50%;
+  padding-top: 10px;
+  margin: 10px;
+  border-width: 0px 0px 1px;
+  outline: none;
+}
+.inpu {
+  width: 50%;
+  padding-top: 10px;
+  margin: 10px;
+  border-width: 0px 0px 1px;
+  outline: none;
+}
+
+// .container{
+//   display: flex;
+//   // flex-direction: column;
+// }
+.form-1,.form-2{
+ display: flex;
+//  justify-content: space-between;
+ flex-direction: column;
+}
+.form-1{
+  width: 400px;
+  float:left;
+}
